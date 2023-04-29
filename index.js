@@ -43,6 +43,7 @@ document.getElementById("logout-btn").addEventListener("click", () => {
       //   localStorage.removeItem("pass");
       localStorage.removeItem("user");
       location.reload();
+      window.location.href = "./index.html";
     });
 
 
