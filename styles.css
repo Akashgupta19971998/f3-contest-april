@@ -1,0 +1,66 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+    position: sticky;
+    top: 0;
+}
+.header .items{
+    display: flex;
+    align-items: center;
+}
+.items .item{
+    padding: 0px 20px;
+}
+
+.items .item a{
+    text-decoration: none;
+    color: #fff;
+}
+.form{
+    width: 80%;
+    margin-left: 10%;
+}
+#signup{
+    margin-left: 10%;
+    margin-top: 50px;
+}
+.form, input{
+    margin-top: 30px;
+    border: none;
+    width: 70%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+#btn{
+width: 100px;
+padding: 5px;
+margin-top: 20px;
+margin-left: 10%;
+}
+
+.details{
+    margin-left: 30px;
+    display: none;
+}
+#btn1{
+    width: 100px;
+    padding: 5px;
+    margin-top: 10px;
+    }
+
+#message{
+    margin-left: 10%;
+}
