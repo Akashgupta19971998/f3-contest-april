@@ -1,35 +1,74 @@
-let fname=document.getElementById("fname")
-let email=document.getElementById("email")
-let pass=document.getElementById("pass")
-let confirm_pass=document.getElementById("confrim-pass")
-let message=document.getElementById("message")
-let message1=document.getElementById("message1")
-let btn11=document.getElementById("btn")
-let forms=document.getElementsByClassName("form")
+let fname = document.getElementById("fname")
+let email = document.getElementById("email")
+let pass = document.getElementById("pass")
+let confirm_pass = document.getElementById("confrim-pass")
+let message = document.getElementById("message")
+let message1 = document.getElementById("message1")
+let btn11 = document.getElementById("btn")
+let forms = document.getElementsByClassName("form")
 // let success_message=document.getElementById("success-message")
 
-function success(){
+const arr = [];
+function success() {
     console.log("hi")
-    if(!(fname.value && email.value && pass.value && confirm_pass.value)){
-    // error_message.innerText="Error ; All the fields are mendatory"
-    // success_message.style.color="red";
-            message.innerText = "Error : All the fields are mendatory";
-            message.style.display = "block";
-            message.style.color = "red";
-            message1.style.display = "none";
+    if (!(fname.value && email.value && pass.value && confirm_pass.value)) {
+        // error_message.innerText="Error ; All the fields are mendatory"
+        // success_message.style.color="red";
+        message.innerText = "Error : All the fields are mendatory";
+        message.style.display = "block";
+        message.style.color = "red";
+        message1.style.display = "none";
     }
-    else{
-                message1.innerText = "successfully signed Up!";
-                message1.style.display = "block";
-                message1.style.color = "green";
-                message.style.display = "none";
+    else {
+        message1.innerText = "successfully signed Up!";
+        message1.style.display = "block";
+        message1.style.color = "green";
+        message.style.display = "none";
     }
-    // showData();
+
+    var user = {
+        name: fname.value,
+        email: email.value,
+        pass: pass.value,
+    };
+    localStorage.setItem("user", JSON.stringify(user));
     setTimeout(() => {
-        window.location.href = "./profile.html";  
+        window.location.href = "./profile.html";
     }, 1000);
-    
+
 }
+
+document.getElementById("logout-btn").addEventListener("click", () => {
+      //   localStorage.removeItem("email");
+      //   localStorage.removeItem("pass");
+      localStorage.removeItem("user");
+      location.reload();
+    });
+
+
+let fname1 = document.getElementById("full-name").vaule
+let email1 = document.getElementById("emails")
+let pass1 = document.getElementById("password")
+let but12 = document.getElementById("btn1")
+
+function input() {
+    fname1.innerContent = fname1
+}
+input()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // btn11.addEventListener("click", success);
 // function success() {
 //     if (!(fname.value && email.value && pass.value && confirm_pass.value)) {
@@ -64,12 +103,7 @@ function success(){
 //     // }, 2000);
 // }
 
-let fname1=document.getElementById("full-name").vaule
-let email1=document.getElementById("emails")
-let pass1=document.getElementById("password")
-let but12=document.getElementById("btn1")
+// localStorage.setItem("Details : ",);
+// localStorage.setItem("email : ",email );
+// localStorage.setItem("password : ", pass);
 
-function input(){
-  fname1.innerContent=fname1  
-}
-input()
