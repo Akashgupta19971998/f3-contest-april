@@ -47,13 +47,15 @@ document.getElementById("logout-btn").addEventListener("click", () => {
     });
 
 
-let fname1 = document.getElementById("full-name").vaule
+let fname1 = document.getElementById("full-name")
 let email1 = document.getElementById("emails")
 let pass1 = document.getElementById("password")
 let but12 = document.getElementById("btn1")
 
 function input() {
-    fname1.innerContent = fname1
+fname1.innerHTML=`Full Name : ${fname1}`;
+email1.innerHTML=`Email : ${fname1}`;
+pass1.innerHTML=`Password : ${fname1}`;
 }
 input()
 
